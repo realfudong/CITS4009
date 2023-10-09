@@ -1,0 +1,294 @@
+<!DOCTYPE html> <html style><!--
+ Page saved with SingleFile 
+ url: https://lms.uwa.edu.au/bbcswebdav/pid-3396145-dt-content-rid-43672634_1/courses/CITS4009_SEM-2_2023/project2.html 
+ saved date: Mon Oct 09 2023 14:47:25 GMT+0800 (GMT+08:00)
+--><meta charset=utf-8>
+<meta name=generator content=pandoc>
+<meta http-equiv=X-UA-Compatible content="IE=EDGE">
+<title>CITS4009 Project 2 — Modelling</title>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<style>html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a{background-color:transparent}a:active,a:hover{outline:0}strong{font-weight:700}h1{margin:.67em 0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.42857143;color:#333;background-color:#fff}a{color:#337ab7;text-decoration:none}a:focus,a:hover{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}h1,h2,h3,h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1,h2,h3{margin-top:20px;margin-bottom:10px}h4{margin-top:10px;margin-bottom:10px}p{margin:0 0 10px}ol,ul{margin-top:0;margin-bottom:10px}ul ul{margin-bottom:0}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote ol:last-child,blockquote p:last-child,blockquote ul:last-child{margin-bottom:0}code{font-family:monospace}code{padding:2px 4px;font-size:90%;border-radius:4px}.container-fluid{padding-right:15px;padding-left:15px}@-webkit-keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}@-o-keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}@keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}.btn-group-vertical>.btn-group:after,.btn-group-vertical>.btn-group:before,.btn-toolbar:after,.btn-toolbar:before,.clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.dl-horizontal dd:after,.dl-horizontal dd:before,.form-horizontal .form-group:after,.form-horizontal .form-group:before,.modal-footer:after,.modal-footer:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before,.pager:after,.pager:before,.panel-body:after,.panel-body:before,.row:after,.row:before{display:table;content:" "}.btn-group-vertical>.btn-group:after,.btn-toolbar:after,.clearfix:after,.container-fluid:after,.container:after,.dl-horizontal dd:after,.form-horizontal .form-group:after,.modal-footer:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after,.pager:after,.panel-body:after,.row:after{clear:both}@-ms-viewport{width:device-width}h4{font-size:18px}code{background-color:rgba(0,0,0,0.04)}code{white-space:pre}.main-container{max-width:940px;margin-left:auto;margin-right:auto}@supports (-ms-accelerator:true){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@-webkit-keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@-webkit-keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@-webkit-keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@-webkit-keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes instantAnminate{from{opacity:1}50%{opacity:0.4}to{opacity:0.9}}.MJX_Assistive_MathML{position:absolute!important;top:0;left:0;clip:rect(1px,1px,1px,1px);padding:1px 0 0 0!important;border:0!important;height:1px!important;width:1px!important;overflow:hidden!important;display:block!important;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#MathJax_Message{position:fixed;left:1em;bottom:1.5em;background-color:#E6E6E6;border:1px solid #959595;margin:0px;padding:2px 8px;z-index:102;color:black;font-size:80%;width:auto;white-space:nowrap}.MathJax{display:inline;font-style:normal;font-weight:normal;line-height:normal;font-size:100%;text-indent:0;text-align:left;text-transform:none;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;direction:ltr;max-width:none;max-height:none;min-width:0;min-height:0;border:0;padding:0;margin:0}.MathJax:focus,body :focus .MathJax{display:inline-table}.MathJax nobr{border:0;padding:0;margin:0;max-width:none;max-height:none;min-width:0;min-height:0;vertical-align:0;line-height:normal;text-decoration:none}.MathJax span{display:inline;position:static;border:0;padding:0;margin:0;vertical-align:0;line-height:normal;text-decoration:none}.MathJax nobr{white-space:nowrap!important}.MathJax *{transition:none;-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none}</style><link type=image/x-icon rel="shortcut icon" href="data:image/x-icon;base64,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RGVyaXZlZEZyb20gcmRmOnBhcnNlVHlwZT0iUmVzb3VyY2UiPgogICAgICAgICAgICA8c3RSZWY6aW5zdGFuY2VJRD54bXAuaWlkOjQxZDgwMDI5LTA2M2QtNDM3OC1hMDczLTBiNGYxMDk4OWM1Yjwvc3RSZWY6aW5zdGFuY2VJRD4KICAgICAgICAgICAgPHN0UmVmOmRvY3VtZW50SUQ+eG1wLmRpZDo0MWQ4MDAyOS0wNjNkLTQzNzgtYTA3My0wYjRmMTA5ODljNWI8L3N0UmVmOmRvY3VtZW50SUQ+CiAgICAgICAgIDwveG1wTU06RGVyaXZlZEZyb20+CiAgICAgICAgIDx4bXBNTTpEb2N1bWVudElEPnhtcC5kaWQ6RDdDMjg3QkRCMDEwMTFFQkFEQTVBQjhGOTcwOTk5OTI8L3htcE1NOkRvY3VtZW50SUQ+CiAgICAgICAgIDx4bXBNTTpJbnN0YW5jZUlEPnhtcC5paWQ6RDdDMjg3QkNCMDEwMTFFQkFEQTVBQjhGOTcwOTk5OTI8L3htcE1NOkluc3RhbmNlSUQ+CiAgICAgICAgIDx4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ+eG1wLmRpZDo0MWQ4MDAyOS0wNjNkLTQzNzgtYTA3My0wYjRmMTA5ODljNWI8L3htcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD4KICAgICAgICAgPHRpZmY6WVJlc29sdXRpb24+NzI8L3RpZmY6WVJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOlhSZXNvbHV0aW9uPjcyPC90aWZmOlhSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4Kew+HIQAAAydJREFUWAntVbtuE0EUPbNeb+xsEifCKUhQoCCRKIASKQ1F+Ac+gU+AggbBN/AHpKKGJuIP6BAFICEBkZAS5DzsrNf7GM6d3Y3XeBc/sEiTK43n7szce859zFgB0BwXJtaFIafAF07AnjYDdQeo0lrqpziCEPB6k3sT24l7wKkAvWgYrGx9+GR/ZWICVYIHBN9aV2g2FELqNtcOjzU+7Wtk+32I0ZpkYOQgU3Nm/Uoy7z52tX67rFuvGzrmvPvENfvXmmqkrzzexD2gVJK0GnsAdQWXGVCczTeXzDbncWXqWxBLnDEQccgcyzyFjE9AAi+QLOKS7QKLwaWRJTAApGkSX9D5mTtJSF7EsdiIyd+SU07AIAKOq2A7ZEAEcaTsrMf4kZMsA+JwtaKgaSLp7ZLBCeuVustZJGo5AeJU5xX8toZv4kgMvCEXyUKWga8RNQk7l60FMmmXpKGUgLtSQacVYefRGm7eW4J/FsOpW/jx/hRvXu5DWVnMCQEGbeTF1WXc36yhze5cqFjY++Xh2ZdjrFYVDoKMZnJWfocJpLmq0ECkeb2GjbuL6J6GqC3a8A7S9zbrPnNK6p2c35y3sb0yh+MwRsO28K3LN5oyJwzHIpA61CnZsKcReBGCbgzLjhAWOElNzOSz3h1GL8MmpnyLpJPR8z/SJ4WSxMPIqEi6z0e2UWglmQAq/LVk0DgDKDPL9kvcTbc8XOlyP4M98Eddy81mtzNIICu8+Ne5ezQTvOK82KbIAuwuQzk1Asd8c1gZ2ydsaybQ4kSpGqrKZn/Io6R4IUKE8HgNBby2AHSOoDt9vISvtE4x8/7J8bQg8swtDHLHK3B4U5aa0CeHcB8+hXNnB7rbNoSsj++AV89JnVmZWkieUYtsuA9wu7qJMPZhW3P46X/Gh5M9ZsCWP3ZenbUtVG9tI2Ym1HwDuvXdrCcO/iULyUVbsFfRdG4giD04Vh1n0ZHxn5SAqg66JnrdZR0ssg6kB2YnsdRc+xw9KP5TRfwWkffCiFJkavEJ4ZCZSrIxo19pvPR5SucEeBDlPNPnyozg824GfQ8SyJ/7T/olgcsM/AbXfA51JCA7QgAAAABJRU5ErkJggg=="><style>.sf-hidden{display:none!important}</style><link rel=canonical href=https://lms.uwa.edu.au/bbcswebdav/pid-3396145-dt-content-rid-43672634_1/courses/CITS4009_SEM-2_2023/project2.html><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
+<body><div style=visibility:hidden;overflow:hidden;position:absolute;top:0px;height:1px;width:auto;padding:0px;border:0px;margin:0px;text-align:left;text-indent:0px;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal><div id=MathJax_Hidden class=sf-hidden></div></div><div id=MathJax_Message style=display:none></div>
+<div class="container-fluid main-container">
+<style class=sf-hidden>body{font-size:14px}h1.title{font-size:32px;color:DarkRed}h1{font-size:28px;color:DarkBlue}h2{font-size:24px;color:DarkBlue}h3{font-size:18px;font-family:"Times New Roman",Times,serif;color:DarkBlue}code{color:red}</style>
+<div id=header>
+<h1 class="title toc-ignore">CITS4009 Project 2 — Modelling</h1>
+<h3 class=subtitle>Worth 20% of the total assessment</h3>
+<h4 class=date>Due: Friday, October 20th, 2023, 11:59pm</h4>
+</div>
+<div id=project-preamble class="section level1">
+<h1>1. Project Preamble</h1>
+<p>This is a group project with at most two students in a group,
+contributing 20% to the final assessment of this unit.</p>
+<ul>
+<li>The group work is not compulsory, you can attempt this project on
+your own.</li>
+<li>If you prefer to work in pairs, and
+<ul>
+<li><strong>have a partner</strong>, one member needs to register both
+of the member information in <a href=https://forms.office.com/r/Myda2UN5Gq>the group registration
+form</a>.</li>
+<li>prefer to be <strong>randomly allocated to a group</strong>, please
+fill in this <a href=https://forms.office.com/r/udq8qeYi3K>Random
+Allocation EOI</a> form.</li>
+<li>if you worked in pairs, upon submission, you need to clearly
+indicate the percentage of contribution of each member to each task at
+the preamble of your R Markdown file, and include a digital signature of
+each member in the submitted file.</li>
+</ul></li>
+</ul>
+<p>In this project, you are to demonstrate your understanding of how
+modelling is carried out using R machine learning functions.</p>
+<p>The submission should be an HTML generated from your R Markdown file
+and a Shiny App.</p>
+</div>
+<div id=data class="section level1">
+<h1>2. Data</h1>
+<p>To demonstrate a full data science life cycle, you are strongly
+suggested to use the data and domain you have explored in Project 1:</p>
+<ul>
+<li><p>A specified dataset</p></li>
+<li><p>Data from public repositories</p></li>
+</ul>
+<div id=specified-data class="section level2">
+<h2>Specified data</h2>
+<p>If you do not have any datasets or domain of interests in mind, we
+suggest you to use the <strong>YouTube</strong> dataset as described in
+project 1.</p>
+</div>
+<div id=data-from-public-repositories class="section level2">
+<h2>Data from public repositories</h2>
+<p>Please refer to the links given in Project 1. You can choose a
+different public dataset if you prefer; however,</p>
+<ul>
+<li>this will require you to spend extra time to go through the EDA
+process to understand the new dataset;</li>
+<li>you will need to consult Wei or Sirui for permission as we need to
+check if all learning outcomes can be demonstrated by your chosen
+dataset.</li>
+</ul>
+</div>
+</div>
+<div id=modelling class="section level1">
+<h1>3. Modelling</h1>
+<div id=classification class="section level2">
+<h2>Classification</h2>
+<p>Firstly, study your dataset and choose the response (i.e., target)
+variable suitable for a classification task. The remaining variables can
+be your feature variables. You may need to discard some character string
+and categorical columns. Columns that have a unique value for each row
+should be discarded, e.g., <code>rank</code>, <code>Youtuber</code>,
+etc. If possible, formulate it as a binary classification problem
+(e.g.&nbsp;<code>high-earning</code>/<code>low-earning</code>), as
+multi-class classification is very difficult and is not covered in the
+lectures.</p>
+<p>Your next step is to split the data into a training set and a test
+set. You can use any meaningful split ratio (90/10, 80/20, etc). You
+should implement R code for a <strong>Descision Tree Classifier</strong>
+and choose one different classification techniques to compare with
+(e.g., <em>logistic regression classifier</em>, <em>Naïve Bayes
+classifier</em>, <em>K nearest neighbours classifier</em>, etc.) and
+compare the performance of the two models. Your report should include
+discussions about attribute and feature selection and their impacts on
+the models. For example, you may have two attribute selection
+techniques, then you will build two models for each classifiers.</p>
+<p>For example, using the <em>Youtuber</em> dataset, we can predict the
+level of earnings (high/low). You may make your own assumptions of high
+earnings or low earnings. For example, earnings against the social
+economic status of the country (e.g.&nbsp;normalised using GDP, or GDP per
+capita). The downloadable data from Word Bank is available at: <a href=https://data.worldbank.org/indicator/NY.GDP.PCAP.CD class=uri>https://data.worldbank.org/indicator/NY.GDP.PCAP.CD</a></p>
+<p><strong>Note</strong>: depending on what predication question you’d
+like to be answered, you may need to tidy the data into the right shape
+or merging multiple datasets. You can start with single-variate models
+and then multi-variate models, following the same process demonstrated
+in the lecture slides. Highly correlated columns and semantic related
+columns will need to be removed (e.g.&nbsp;only keep one of the
+<code>earnings</code> column.</p>
+<p>A good demonstration of the following investigations is expected:</p>
+<ol style=list-style-type:decimal>
+<li><p>Understanding of what a null model would look like in this
+context.</p></li>
+<li><p>Aggregating, sub-setting, sampling or reshaping the data for
+better data preparation if necessary.</p></li>
+<li><p>Transforming the categorical variables into numerical for
+single-variate model selection.</p></li>
+<li><p>Using various measures to select a good combination of variables
+for multi-variate models.</p></li>
+<li><p>Using <strong>LIME</strong> (see Labweek09) to find the
+determining feature(s) for the classification of a few instances from
+the test set. Discuss about your experimental findings in the
+report.</p></li>
+<li><p>Evaluation of models. This step involves comparing your
+multi-variate models for the two implemented machine learning techniques
+on the training set and the test set using various measures (such as ROC
+plots, confusion matrices, deviances, etc).</p></li>
+<li><p>Different techniques to generate combinations of variables. For
+example, information gain, principal component analysis, and forward
+selection. For bonus marks, you can also implement an attribute
+combination technique from reviewing literature.</p></li>
+</ol>
+</div>
+<div id=clustering class="section level2">
+<h2>Clustering</h2>
+<p>Choose or compute a set of feature variables; apply a clustering
+algorithm to these variables; visualise the clustering results and
+explain the rules discovered.</p>
+<ul>
+<li><p>Explain how and why you choose the distance measures and how the
+choices affect your clustering outcome.</p></li>
+<li><p>An investigation on the selection of <span class="math inline"><span class=MathJax_Preview style=color:inherit;display:none></span><span class=MathJax id=MathJax-Element-1-Frame tabindex=0 style=position:relative data-mathml='<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>' role=presentation><nobr aria-hidden=true><span class=math id=MathJax-Span-1 style=width:0.598em;display:inline-block><span style=display:inline-block;position:relative;width:0.479em;height:0px;font-size:120%><span style=position:absolute;clip:rect(1.372em,1000.48em,2.384em,-999.997em);top:-2.199em;left:0em><span class=mrow id=MathJax-Span-2><span class=mi id=MathJax-Span-3 style=font-family:STIXGeneral-Italic>k<span style=display:inline-block;overflow:hidden;height:1px;width:0.003em></span></span></span><span style=display:inline-block;width:0px;height:2.205em></span></span></span><span style="display:inline-block;overflow:hidden;vertical-align:-0.068em;border-left:0px solid;width:0px;height:1.004em"></span></span></nobr><span class=MJX_Assistive_MathML role=presentation><math xmlns=http://www.w3.org/1998/Math/MathML><mi>k</mi></math></span></span></span> – the number of clusters.</p></li>
+</ul>
+</div>
+</div>
+<div id=marking-criteria class="section level1">
+<h1>4. Marking Criteria</h1>
+<ul>
+<li><p><strong>Data preparation (10%):</strong> Proficient use of data
+handling functions (e.g.&nbsp;pipes, merge/joins) or packages to construct
+clean and tidy training and testing datasets for classification.
+Sensible aggregation, transformation to obtain the right data for
+modelling, and <span style=color:red>good handling of missing
+data</span>.</p></li>
+<li><p><strong>Classification (40%):</strong> Good and thorough
+comparison of Decision Tree Classifiers against a different type of
+classification models with sensible interpretations of the performance
+measures, contextually with the right domain intuition. Good comparison
+of attribute or feature selection strategies.</p></li>
+<li><p><strong>Clustering (20%):</strong> Good implementation of
+clustering with adequate investigations, demonstrations and explanation
+on the effect of hyper-parameters (e.g., <span class="math inline"><span class=MathJax_Preview style=color:inherit;display:none></span><span class=MathJax id=MathJax-Element-2-Frame tabindex=0 style=position:relative data-mathml='<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>' role=presentation><nobr aria-hidden=true><span class=math id=MathJax-Span-4 style=width:0.598em;display:inline-block><span style=display:inline-block;position:relative;width:0.479em;height:0px;font-size:120%><span style=position:absolute;clip:rect(1.372em,1000.48em,2.384em,-999.997em);top:-2.199em;left:0em><span class=mrow id=MathJax-Span-5><span class=mi id=MathJax-Span-6 style=font-family:STIXGeneral-Italic>k<span style=display:inline-block;overflow:hidden;height:1px;width:0.003em></span></span></span><span style=display:inline-block;width:0px;height:2.205em></span></span></span><span style="display:inline-block;overflow:hidden;vertical-align:-0.068em;border-left:0px solid;width:0px;height:1.004em"></span></span></nobr><span class=MJX_Assistive_MathML role=presentation><math xmlns=http://www.w3.org/1998/Math/MathML><mi>k</mi></math></span></span></span> for the number of clusters) in these
+unsupervised techniques.</p></li>
+<li><p><strong>Shiny App (20%):</strong> Sensible UI design to allow
+users to interactively viewing single variable model performance, two
+classification model performance and the clustering results.</p></li>
+<li><p><strong>Overall Report Quality (10%):</strong> The report quality
+and the professionalism of video presentation will be considered. Treat
+this as presenting your final product to stakeholders and your
+client.</p></li>
+<li><p>To obtain marks in the HD range (80%-100%), you should aim at
+having the following elements in your project:</p>
+<ul>
+<li>Well demonstrated exceptional understandings of the principles for
+model comparison and selection (NOTE: simply building a few more models
+will not automatically warrant marks in the HD range).</li>
+<li>Thorough and effective treatment of data to improve model
+performance, e.g., imbalanced dataset treatment.</li>
+<li>Exceptional data provenance for reproducible data science.</li>
+<li>Exceptional understanding of feature variable treatment and
+selection.</li>
+<li>Appropriate use of short text descriptions in diagrams (e.g.,
+annotations).</li>
+</ul></li>
+</ul>
+</div>
+<div id=project-group-registration class="section level1">
+<h1>5. Project Group Registration</h1>
+<p>To register to form a group with another student, enter both
+students’ family names, given names, and student IDs on the form given
+in the <strong>Project 2 Team Registration</strong> tab on Teams Project
+Channel or through this direct link: <a href=https://forms.office.com/r/Myda2UN5Gq class=uri>https://forms.office.com/r/Myda2UN5Gq</a>.</p>
+<p>If you intend to work by yourself on the project, you don’t need to
+do anything.</p>
+<p>If you prefer to be randomly allocated to a group, please use this
+link: <a href=https://forms.office.com/r/udq8qeYi3K class=uri>https://forms.office.com/r/udq8qeYi3K</a></p>
+</div>
+<div id=submission class="section level1">
+<h1>6. Submission</h1>
+<ol style=list-style-type:decimal>
+<li><p>Store the Shiny App in an <code>app.R</code> file;</p></li>
+<li><p>Create a short 2-3 minutes video demonstrating the Shiny App, and
+provide a Youtube link to the video in the .Rmd file. Please show your
+face (or both of the group members’ faces) in your presentation. You
+will also need to use your own voice to explain the best features of
+your App, no AI voices accepted.</p></li>
+<li><p>Generate an html file with the name
+<strong>project2.html</strong> from your .Rmd file</p></li>
+<li><p>Zip up the Shiny App file and .html file and submit it to
+<strong><a href=https://secure.csse.uwa.edu.au/run/cssubmit>cssubmit</a></strong>.</p></li>
+</ol>
+<p>You should keep a record of your progressive work towards the final
+submission and also a copy of your latest work. You are encouraged to
+submit to <em>cssubmit</em> as often as you like (or need). The latest
+submission will overwrite the previous version.</p>
+<p>If you like version controlling your work, then you can keep your
+working copies on <a href=https://github.com/>GitHub</a> before the
+final submission to cssubmit; however, do make sure you keep your GitHub
+repo <strong>private</strong>.</p>
+<div id=submission-check-list class="section level2">
+<h2><span style=color:red>Submission Check List:</span></h2>
+<ul>
+<li><p>Make sure that you have your name and student number clearly
+written at the beginning of your R markdown file. To make it easier for
+us in the marking process,</p>
+<ul>
+<li>please ensure that you <strong>have your student number written
+correctly</strong>.</li>
+<li>please ensure that you <strong>use exactly the same name as shown on
+LMS</strong>.</li>
+<li>please put your <strong>surname in uppercase letters</strong>, e.g.,
+Michael CHEN, John SMITH, Xiaolian HUANG.<br><br></li>
+</ul></li>
+<li><p><strong>If you have a project partner, then both students’ names,
+student numbers, and percentages of contribution to the project</strong>
+should be clearly shown. <strong>NOTE: Only one submission is needed
+from each project group.</strong></p></li>
+<li><p>Submit the generated <strong>.html</strong> file (<strong>not the
+<code>.Rmd</code> file or the <code>.nb.html</code> file</strong>) and
+the Shiny App file. Before submission, check that you can view your
+<strong>.html</strong> file in a web browser outside Rstudio and that no
+diagrams are missing.</p></li>
+</ul>
+</div>
+</div>
+<div id=special-considerations class="section level1">
+<h1>7. Special Considerations</h1>
+<p>Please make yourself familiar with the UWA special consideration
+process. All special considerations are handled centrally at UWA. Unit
+Coordinators are no longer processing individual request of project
+extensions. Please fill in the forms if needed:</p>
+<p><a href=https://www.uwa.edu.au/students/My-course/Exams-assessments-and-results/Special-consideration class=uri>https://www.uwa.edu.au/students/My-course/Exams-assessments-and-results/Special-consideration</a></p>
+</div>
+<div id=penalty-on-late-submissions class="section level1">
+<h1>8. Penalty on Late Submissions</h1>
+<p>See the URL below about late submissions of assignments: <strong><a href=https://ipoint.uwa.edu.au/app/answers/detail/a_id/2711/~/consequences-for-late-assignment-submission class=uri>https://ipoint.uwa.edu.au/app/answers/detail/a_id/2711/~/consequences-for-late-assignment-submission</a></strong></p>
+<p>For example, if you get 70 marks (out of the total 100 marks) before
+applying the late penalty and if your submission is <em>two days</em>
+late, then you get 60 as your final mark (i.e., 10% of the <strong>total
+mark</strong> - NOTE not your mark - is deducted).</p>
+</div>
+<div id=use-of-chatgpt-or-other-generative-ai-tools class="section level1">
+<h1>9. Use of ChatGPT (or other Generative AI tools)</h1>
+<p>You are permitted to use ChatGPT or other Generative AI tools to
+generate code and help you learn. However, you must cite and explain how
+you used it. Generated code and documentations can be easily detected by
+human markers. To avoid plagiarism and academic misconduct
+investigations, please do provide citation and explain what changes you
+have to made to the code to demonstrate your own understanding. Here are
+a few UWA articles about how to cite and use generative AI in your
+assessment.</p>
+<ul>
+<li><a href=https://ipoint.uwa.edu.au/app/answers/detail/a_id/3432/related/1>Can
+I use ChatGPT and other AI tools in my assessments?</a></li>
+<li><a href=https://ipoint.uwa.edu.au/app/answers/detail/a_id/3434/~/how-to-cite-and-reference-chatgpt-and-other-generative-ai-tools-in-assessments>How
+do I cite and reference ChatGPT</a></li>
+<li><a href=https://www.uwa.edu.au/students/-/media/Project/UWA/UWA/Students/Docs/STUDYSmarter/Using-AI-Tools-at-UWA.pdf>Guide
+for using AI Tools at UWA</a></li>
+</ul>
+<p>The <a href=https://guides.library.uwa.edu.au/strategicpublishing/draftpapercheck>library
+guide on writing academic papers</a> might also be relevant:</p>
+<blockquote>
+<p>For example, where relevant, Mathematics and Physical Sciences papers
+should discuss and reference the following as a minimum, to assign
+attribution and enable readers to re-create the outcome:</p>
+</blockquote>
+<ul>
+<li>Source (e.g.&nbsp;OpenAI/Microsoft, Anthropic/Google, NVIDIA etc. )</li>
+<li>Model (e.g.&nbsp;GPT 3)</li>
+<li>Implementation (e.g.&nbsp;davinci-003)</li>
+<li>Fine-tuning (Where the user has fine-tuned the ‘inbuilt’ knowledge
+of LLMs based on their own libraries of content via APIs or other
+processes).</li>
+</ul>
+</div>
+</div>
+<div style=position:absolute;width:0px;height:0px;overflow:hidden;padding:0px;border:0px;margin:0px><div id=MathJax_Font_Test style=position:absolute;visibility:hidden;top:0px;left:0px;width:auto;padding:0px;border:0px;margin:0px;white-space:nowrap;text-align:left;text-indent:0px;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;font-size:40px;font-weight:normal;font-style:normal;font-family:STIXSizeOneSym,sans-serif class=sf-hidden></div></div>
